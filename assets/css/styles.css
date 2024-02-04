@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;400&display=swap');
+
+:root{
+    --primary-color: #F0F0F0;
+
+    --primary-bg-color: #111217;
+    --secondary-bg-color: #28292E;
+    
+    --border-color: #28292E;
+
+    --title-color: #F0F0F0;
+    --text-color: #9A9A9C;
+    --link-color: #9A9A9C;
+    --icon-color: #C7C8C9;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    list-style: none;
+}
+
+body{
+    background-color: var(--primary-bg-color);
+    font-family: 'Inter';
+}
+
+a {
+    text-decoration: none;
+}
+
+i{
+    color: var(--icon-color);
+}
+
+.header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    padding: 2rem 2rem;
+}
+
+.icon-container {
+    margin-left: auto;
+}
+
+.header .icon-container {
+    margin-left: auto;
+}
+
+#toggleTheme{
+    font-size: 1.5rem;
+    color: var(--primary-color)
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    background: var(--primary-bg-color);
+  }
+  
+  .menu__item {
+    width: 100%;
+  }
+  
+  .menu__link {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+  
+  .menu--mobile {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-between;
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .menu--mobile .menu__link {
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 1rem;
+  }
+
+  .menu__link.active .menu__icon, 
+  .menu__link.active .menu__text,
+  .menu__link:hover .menu__icon, 
+  .menu__link:hover .menu__text {
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+  
+  .menu__icon, .menu__text {
+    color: var(--text-color);
+  }
+  
+  .menu__icon {
+    font-size: 1.5rem;
+  }
+  
+  .menu__text {
+    font-size: .75rem;
+    text-transform: uppercase;
+  }
+  
+  .header__nav {
+    display: none;
+  }
+  
+  .menu--principal {
+    gap: 1rem;
+  }
+  
+  .menu--social {
+    gap: 1rem;
+  }
+
+@media (min-width: 768px) {
+    .header {
+      position: fixed;
+      border-bottom: 1px solid var(--primary-border-color);
+      padding: 1rem 6rem;
+      background: var(--primary-bg-color);
+    }
+  
+    .nav--mobile {
+      display: none;
+    }
+
+}
