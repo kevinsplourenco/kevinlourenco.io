@@ -29,6 +29,21 @@
 	--icon-color: #56575A;
 }
 
+.technologies__list img:hover {
+  filter: brightness(120%);
+}
+
+:root[data-theme='light'] .technologies__logo {
+  filter: invert(0%); /* Inverte as cores das imagens quando o tema é light */
+}
+
+:root[data-theme='light'] .technologies__list img {
+  filter: invert(100%);
+}
+
+:root[data-theme='light'] .technologies__list img:hover {
+  filter: invert(80%);
+}
 
 html[data-theme='light'] .technologies__logo {
   filter: invert(80%);
@@ -258,7 +273,8 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  margin-bottom: 7rem;
+  margin-bottom: 10rem;
+  margin-top: 10rem;
 }
 
 .technologies {
@@ -331,6 +347,7 @@ main {
 
 .card__description {
   color: var(--title-color);
+  font-size: large;
 }
 
 .card__list, .about__list {
@@ -339,6 +356,7 @@ main {
 
 .card__item, .about__item {
   list-style: disc;
+  font-size: large;
 }
 
 .card__buttons, .description__buttons {
@@ -365,7 +383,7 @@ main {
 }
 
 .card__body .technologies__logo {
-  height: 2rem;
+  height: 4rem;
 }
 
 .projects .btn {
@@ -388,15 +406,14 @@ main {
 }
 
 .about__photo {
-  width: 100%;
+  width: 110%;
   object-fit: cover;
   object-position: center;
   pointer-events: none;
-  border-radius: 50rem;
-  border: 1px solid var(--primary-border-color);
 }
 
 .about__description {
+  margin-top: 5.5rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -480,6 +497,7 @@ main {
 }
 
 .contact {
+  margin-top: 15rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
