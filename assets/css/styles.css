@@ -45,6 +45,10 @@ i{
     padding: 2rem 2rem;
 }
 
+.header__toggle{
+    min-width: 40%;
+}
+
 .icon-container {
     margin-left: auto;
 }
@@ -124,13 +128,30 @@ i{
 @media (min-width: 768px) {
     .header {
       position: fixed;
-      border-bottom: 1px solid var(--primary-border-color);
-      padding: 1rem 6rem;
+      border-bottom: 2px solid var(--border-color);
+      padding: 1.5rem 6rem;
       background: var(--primary-bg-color);
     }
   
     .nav--mobile {
       display: none;
     }
+
+    .header__nav {
+        display: flex;
+      }
+
+    .header__nav,
+    .header__toggle{
+        min-width: 30%;
+    }
+
+
+}
+
+@media(min-width: 768px){
+    .header {
+        padding: 1.5rem 15rem;
+      }
 
 }
